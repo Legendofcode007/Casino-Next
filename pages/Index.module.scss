@@ -1,0 +1,13 @@
+@import "../styles/variables.scss";
+
+.Index {
+  padding: 0;
+  padding-left: calc(($spacer * 0.5) + 1vw);
+  padding-right: calc(($spacer * 0.5) + 1vw);
+  
+ 
+  // @media (max-width: 600px) {
+  //   padding-left: 0;
+  //   padding-right: 0;
+  // }
+}

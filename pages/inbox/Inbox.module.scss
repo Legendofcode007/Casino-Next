@@ -1,0 +1,19 @@
+
+
+
+.Table { 
+  thead th {
+    background-color: #191919;
+    min-width: 120px;
+  }
+  
+  
+  .Hide {
+    display: none;
+  }
+
+  .Message {
+    max-height: 300px;
+    overflow: auto;
+  }
+}

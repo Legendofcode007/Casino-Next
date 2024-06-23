@@ -1,0 +1,80 @@
+
+.DefaultFormWrap {
+  @media (min-width: 960px) {  
+    width: 720px !important;
+  }
+
+  .DefaultForm {
+    width: 100%;
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.4);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 0px;
+    box-sizing: border-box;
+    
+    .Inbox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+
+
+
+// input[type="text"]::-webkit-input-placeholder {
+//     color: #999;
+// }
+
+// input[type="password"]::-webkit-input-placeholder {
+//     color: #999;
+// }
+
+
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover,
+// input:-webkit-autofill:focus,
+// input:-webkit-autofill:active {
+//     transition: background-color 5000000s ease-in-out 0s;
+
+// }
+
+
+// input:-webkit-autofill {
+//     -webkit-text-fill-color: #fff;
+// }
+
+
+
+.game-btn {
+  background: radial-gradient(ellipse farthest-corner at right bottom, #B28DFF 0%, #9A5BDB 8%, #6E3592 30%, #5C287E 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #EDE7FF 0%, #DED1FF 8%, #A78ECC 25%, #5B347A 62.5%, #5B347A 100%);
+  border: 0;
+  padding: 10px 60px;
+  color: #fff;
+  font-size: 15px;
+    font-weight: 600;
+  transition: 0.4s;
+  border-radius: 20px;
+  outline: none;
+  
+}
+
+
+.game-btn:hover {
+  box-shadow: 3px 3px 12px #5C287E, -3px -3px 32px #9A5BDB;
+}
+
+
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

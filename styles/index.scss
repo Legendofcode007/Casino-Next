@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400&display=swap");
+@import url('https://fonts.cdnfonts.com/css/led-digital-7');
+
+@import "./variables.scss";
+@import "bootstrap/scss/bootstrap.scss";
+@import "./icofont.css";
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $secondary;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+input:read-only {
+  color: $input-disabled-color;
+  &:focus {
+    color: $input-disabled-color;
+  }
+}

@@ -1,0 +1,194 @@
+@import "../../../styles/animation.scss";
+@import "../../../styles/variables.scss";
+
+.CasinoCardList { 
+  display: grid;
+  grid-template: repeat(1, 1fr) / repeat(5, 1fr);
+  grid-gap: 10px;
+  box-sizing: border-box;
+  max-width: 1400px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 960px) {
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+    max-width: 630px;
+  }
+  @media (max-width: 480px) {
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    max-width: 460px;
+  }
+}
+
+.SlotCardList { 
+  display: grid;
+  grid-template: repeat(1, 1fr) / repeat(4, 1fr);
+  grid-gap: 10px;
+  box-sizing: border-box;
+  max-width: 1400px;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 960px) {
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+    max-width: 630px;
+  }
+  @media (max-width: 480px) {
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    max-width: 460px;
+  }
+}
+
+.CasinoCard {
+  // display: flex;
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 13px;
+  height: 270px;
+  cursor: pointer;
+
+  .Fill {
+    border-radius: 13px;
+
+    position: absolute;
+    background-color: #111;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    overflow: hidden;
+    filter: grayscale(1) brightness(0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    .Background {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      width: auto;
+      height: auto;
+      
+    }
+    .Logo {
+      position: relative;
+      transition: all 200ms;
+      height: 60px;
+      max-width: 200px;
+    }
+    .Title {
+      position: relative;
+      opacity: 0;
+      text-align: center;
+      color: white;
+
+      .SubTitle {
+        text-align: center;
+      }
+    } 
+
+     
+   
+  }
+
+  &:hover,&:active {
+    .Border {
+      filter: grayscale(0) brightness(1);
+    
+
+    }
+    .Fill {
+      filter: grayscale(0);
+      transition: all 300ms;
+
+   
+      .Logo {
+        height: 80px;
+      }
+      .Title{ 
+        opacity: 1;
+        text-shadow: 0px 0px 5px #ff141455, 0px 0px 10px #ff141488, 0px 0px 20px #ff1414aa;;
+        font-weight: 600;
+        font-size: 20px;
+        .SubTitle {
+          text-shadow: none;
+          color: #545454;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+.Border {
+  border-radius: 13px;
+  position: absolute;
+  background-size: 80rem 80rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: $border-gradiant;
+  filter: grayscale(1) brightness(0.3);
+  transition: all 300ms;
+  animation: background_animation 2s linear infinite;
+  background-size: 80rem 80rem;
+}
+
+.SlotCard {
+  max-width: 400px;
+  width: 100%;
+  height: 140px;
+  border-radius: 13px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+ 
+
+  .Fill{
+    position: absolute;
+    top:1px;
+    left:1px;
+    right: 1px;
+    bottom: 1px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 13px;
+
+    background: linear-gradient(to bottom, #242424, #000000);
+    .LogoWrap {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      .Logo {
+        max-width: 180px;
+        max-height: 80px;
+      }
+    }
+    .Title {
+      background: #211e28;
+      color:white;
+      display: flex;
+      align-items: center;
+      height: 50px;
+      line-height: 50px;
+      border-bottom-left-radius: 13px;
+      border-bottom-right-radius: 13px;
+      padding-left: 12px;
+    }
+  }
+
+  &:hover,&:active {
+    .Border {
+      filter: grayscale(0) brightness(1);
+    }
+  }
+}

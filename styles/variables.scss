@@ -1,0 +1,36 @@
+
+$variable-prefix: family-;
+
+$body-color: #191919;
+$primary: #6426c7;
+$secondary: #A17AB9;
+
+
+$border-color: rgba(203, 201, 201, 0.5);
+$box-shadow: rgba(214, 215, 216, 0.4);
+
+$border-gradiant:linear-gradient(135deg, #f4d8fc 0%, transparent 25%, transparent 50%, #A17AB9 55%,#6426c7  70%, transparent 75%, transparent), #f4d8fc; 
+$success-border-gradiant: linear-gradient(135deg, #b5c6dc 0%, transparent 25%, transparent 50%, #5e92d5 55%,#106eea  70%, transparent 75%, transparent), #b5c6dc; 
+
+
+$icon-color:$secondary;
+$spacer: 1rem;
+
+
+$input-bg: rgba(203, 201, 201, 0.05);
+
+$input-color:                           #cdcdcd;
+$input-border-color:                    $border-color;
+$input-border-width:                    1px;
+$input-box-shadow:                      none;
+$input-border-radius:                   10px;
+$input-border-radius-lg:                10px;
+$input-focus-bg:                        $input-bg;
+
+$input-disabled-color:                  $border-color;
+$input-disabled-bg:                     $input-bg;
+$input-disabled-border-color:           null;
+
+
+$input-placeholder-color:               $border-color;
+$form-label-color: #fff;

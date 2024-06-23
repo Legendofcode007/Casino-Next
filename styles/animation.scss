@@ -1,0 +1,17 @@
+@keyframes background_animation {
+  0%{
+      background-position: 0rem;
+  }
+  100%{
+      background-position: 80rem;
+  }
+}
+
+@keyframes typography_animation {
+  0%{
+    background-position: 0rem;
+  }
+  100%{
+      background-position: 50rem;
+  }
+}

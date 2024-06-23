@@ -1,0 +1,20 @@
+@import "../styles/animation.scss";
+@import "../styles/variables.scss";
+
+.Typography {
+  color: $primary;
+
+  
+  &.Animation {
+    background: $border-gradiant;
+    animation: typography_animation 4s linear infinite;
+    background-size: 50rem 50rem;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+h1.Typography.Title {
+  font-size: calc(2rem + 1.5vw);
+  font-weight: 900;
+}

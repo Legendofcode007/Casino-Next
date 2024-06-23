@@ -1,0 +1,48 @@
+@import "../../../styles/variables.scss";
+
+
+
+.HeaderUserInfo {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0.8rem;
+  color: #fff;
+  gap: 0.6rem;
+
+
+  i {
+    color: $icon-color;
+  }
+
+
+  .Item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+
+    p {
+      font-size: 1rem;
+    }
+    strong {
+      font-size: 1.1rem;
+    }
+    >* {
+      margin: 0;
+    }
+
+    
+  } 
+
+  @media (max-width: 640px) {
+    justify-content: center;
+    border-image:linear-gradient(to right, #6426c7 0%, #B885D0 8%, #5417df 30%, #A17AB9 100%, transparent 100%);
+    border-image-slice: 1;
+    border-bottom:3px solid;
+   
+  }
+
+}

@@ -1,0 +1,39 @@
+@import "../../../styles//variables.scss";
+
+
+.VisualBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #400e0e;
+  background: linear-gradient($body-color, #000000);
+  overflow: hidden;
+  height: 500px;
+  &.Large {
+    height: 790px;
+  }
+  .ImgBox {
+    display: flex;
+    position: absolute;
+    right: 0;
+  }
+  .Container {
+    position: relative;
+    padding-top: calc(2rem + 1.5vw);
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 640px) {
+    &.Large {
+      height: 500px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &.Large {
+      height: 350px;
+    }
+    
+  }
+}

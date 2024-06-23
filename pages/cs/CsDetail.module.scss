@@ -1,0 +1,65 @@
+@import "../../styles/variables.scss";
+
+
+.CSDetailWrap {
+  max-width: 700px;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  @media (max-width: 640px) {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .CSDetail {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $border-color;
+    box-shadow: 0 0 30px $box-shadow;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    padding: 0;
+   
+
+    &>* {
+      border-bottom: 1px solid $border-color;
+      padding: 0.8rem;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    .Title {
+      display: inline-flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .Pending {
+        color: var(--#{$variable-prefix}danger) ;
+      }
+      .Success {
+        color: var(--#{$variable-prefix}success) ;
+      }
+
+      .Date {
+        color: $border-color;
+      }      
+      h4,h5,h6 {
+        margin: 0;
+        text-overflow: ellipsis;
+        word-break: break-all;
+      }
+
+    
+    }
+
+    .Description {
+      min-height: 200px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+  }
+
+}

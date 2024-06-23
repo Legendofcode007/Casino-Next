@@ -1,0 +1,75 @@
+
+
+
+.AppBar { 
+  display: flex;
+  flex-direction: column;
+  
+  .MobileNickName {
+    display: none;
+  }
+  @media (max-width:640px) {
+    flex-direction: column-reverse;
+
+    .MobileNickName {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.Header {
+  background: transparent;
+  transition: all 0.5s;
+  z-index: 997;
+  height: 86px;
+  border-bottom:3px solid;
+  border-top:3px solid;
+  border-image:linear-gradient(to right, #6426c7 0%, #B885D0 8%, #5417df 30%, #A17AB9 100%, transparent 100%);
+  border-image-slice: 1;
+  /*box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);*/
+}
+
+.Header .fixed-top {
+  height: 70px;
+}
+
+
+
+.Logo {
+  max-width: 150px;
+  max-height: 100px;
+}
+
+@media (max-width: 1199px) {
+  .Logo {
+      max-width: 160px;
+  }
+}
+
+@media (max-width: 767px) {
+  .Logo {
+      max-width: 150px;
+  }
+}
+
+@media (max-width: 575px) {
+  .Logo {
+      max-width: 130px;
+      max-height: 80px;
+  }
+}
+
+
+@keyframes header_animation {
+  0%{
+      background-position: 0rem;
+  }
+  100%{
+      background-position: 80rem;
+  }
+}

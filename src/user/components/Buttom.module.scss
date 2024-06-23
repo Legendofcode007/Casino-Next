@@ -1,0 +1,72 @@
+@import "../styles/variables.scss";
+@import "../styles/animation.scss";
+
+.Button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:none;
+  .Border {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #3e3e3e;
+
+    // transition: all 100ms;
+  }
+  &:hover,&:active,&.Animation {
+    .Border {
+      background: $border-gradiant;
+      background-size: 80rem 80rem;
+      animation: background_animation 2s linear infinite;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
+  }
+  &.Animation:hover,&.Animation:active {
+    .Border {
+      filter: grayscale(0.6) brightness(0.5) ;
+    }
+  }
+
+  &.SuccessColor:hover,&.SuccessColor:active,&.Animation.SuccessColor {
+    .Border {
+      background: $success-border-gradiant;
+      animation: background_animation 2s linear infinite;
+      background-size: 80rem 80rem;
+    }
+
+  }
+
+
+  .Fill {
+    position: absolute;
+    top:1px;
+    left:1px;
+    bottom:1px;
+    right:1px;
+    background-color: $body-color;
+  }
+  &.Small{ 
+
+  }
+  &.Medium {
+    font-size: 0.7rem;
+    height: 2.4rem;
+    width: 8rem;
+  }
+  &.Large {
+    font-size: 0.8rem;
+    height: 2.8rem;
+    width: 10rem;
+  }
+  span {
+    position: relative;
+    color: #fff;
+
+  }
+}
